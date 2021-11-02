@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 domain='https://en.wikipedia.org'
-flower_type = f"{domain}/wiki/Flower"
+history_of_mexico= f'{domain}/wiki/History_of_Mexico'
 
 
 
@@ -17,7 +17,7 @@ def get_citations_needed_count(url):
 
     html_text = result.text
     print(result.text)
-    file=open('flower_type.html','w')
+    file=open('history_of_mexico.html','w')
     file.write(html_text)
     file.close()
  
@@ -46,7 +46,7 @@ def get_citations_needed_report(url):
     return list
 
 
-get_citations_needed_count(flower_type)
-print(get_citations_needed_count(flower_type))
-print(get_citations_needed_report(flower_type))
+get_citations_needed_count(history_of_mexico)
+print(get_citations_needed_count(history_of_mexico))
+print(get_citations_needed_report(history_of_mexico))
 quit()
